@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Action_ChangeTextToText1 : MonoBehaviour
+public class CheckActionRoutine : MonoBehaviour
 {
 	void ChangeTextToText1()
 	{

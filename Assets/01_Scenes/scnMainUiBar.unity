@@ -400,7 +400,6 @@ GameObject:
   - 222: {fileID: 733675160}
   - 114: {fileID: 733675159}
   - 114: {fileID: 733675158}
-  - 114: {fileID: 733675161}
   m_Layer: 5
   m_Name: btnChangeText
   m_TagString: Untagged
@@ -465,7 +464,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 733675161}
+      - m_Target: {fileID: 0}
         m_MethodName: SendMessage
         m_Mode: 5
         m_Arguments:
@@ -511,32 +510,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 733675156}
---- !u!114 &733675161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 733675156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fe61d47d8623d448b9ce3fbb293b14b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &915689447 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 126050, guid: b259b0c2b184b854fa8e8ad9b8b4c725, type: 2}
-  m_PrefabInternal: {fileID: 518381014}
---- !u!114 &915689448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 915689447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc1091a9aba728540a8297ce97e65e0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &950087109
 RectTransform:
   m_ObjectHideFlags: 0
