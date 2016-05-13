@@ -11,11 +11,14 @@ using UnityEngine.UI;
 /// </summary>
 public class Singleton : MonoBehaviour
 {
+	// 정적 Singleton 객체 생성
+	private static Singleton instance = null;
 
-	private static Singleton instance = null;	// 정적 Singleton 객체 생성
+	// 게임오브젝트 핸들 변수
+	public GameObject txtResult;
 
-	public GameObject txtResult;	// 게임오브젝트 핸들
-	public Text txtResult_Text;		// 게임오브젝트 내 컴포넌트 핸들
+	// 게임오브젝트 내 컴포넌트 핸들 변수
+	public State_txtResult txtResult_State;		
 
 	public static Singleton Instance
 	{
@@ -32,8 +35,11 @@ public class Singleton : MonoBehaviour
 
 	void Awake()
 	{
+		// 게임오브젝트 얻기
 		txtResult = GameObject.Find("txtResult");
-		txtResult_Text = txtResult.GetComponent<Text>();
+
+		// 상태 컴포넌트 얻기
+		txtResult_State = txtResult.GetComponent<State_txtResult>();
 	}
 
 }
