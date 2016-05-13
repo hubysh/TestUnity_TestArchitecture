@@ -2,6 +2,7 @@
 using System.Collections;
 using System;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 /// <summary>
 /// 전역에서 접근 가능한 클래스
@@ -10,9 +11,11 @@ using System.Collections.Generic;
 /// </summary>
 public class Singleton : MonoBehaviour
 {
-	private static Singleton instance = null;
 
-	public GameObject txtResult;
+	private static Singleton instance = null;	// 정적 Singleton 객체 생성
+
+	public GameObject txtResult;	// 게임오브젝트 핸들
+	public Text txtResult_Text;		// 게임오브젝트 내 컴포넌트 핸들
 
 	public static Singleton Instance
 	{
@@ -30,6 +33,7 @@ public class Singleton : MonoBehaviour
 	void Awake()
 	{
 		txtResult = GameObject.Find("txtResult");
+		txtResult_Text = txtResult.GetComponent<Text>();
 	}
 
 }
