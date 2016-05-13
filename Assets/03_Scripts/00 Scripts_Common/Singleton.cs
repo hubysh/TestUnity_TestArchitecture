@@ -18,7 +18,8 @@ public class Singleton : MonoBehaviour
 	public GameObject txtResult;
 
 	// 게임오브젝트 내 컴포넌트 핸들 변수
-	public State_txtResult txtResult_State;		
+	public State_txtResult txtResult_State;
+	public Text txtResult_Text;
 
 	public static Singleton Instance
 	{
@@ -40,6 +41,9 @@ public class Singleton : MonoBehaviour
 
 		// 상태 컴포넌트 얻기
 		txtResult_State = txtResult.GetComponent<State_txtResult>();
+
+		// Text 컴포넌트 얻기
+		txtResult_Text = txtResult.GetComponent<Text>();
 	}
 
 }

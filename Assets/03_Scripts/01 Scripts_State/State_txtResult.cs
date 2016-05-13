@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEditorInternal;
+using System;
 
 /// <summary>
 /// 오브젝트의 상태를 결정하는 스크립트
@@ -11,6 +12,7 @@ public class State_txtResult : MonoBehaviour
 {
 	// 오브젝트의 상태 값
 	private string stateValue;
+	private string tempStateValue;
 
 	public string StateValue
 	{
@@ -21,6 +23,8 @@ public class State_txtResult : MonoBehaviour
 
 		set
 		{
+			tempStateValue = stateValue;
+
 			switch (value)
 			{
 				case "Idle":
@@ -36,13 +40,27 @@ public class State_txtResult : MonoBehaviour
 					stateValue = "Test1+Test2";
 					break;
 			}
-			stateValue = value;
+
+			if (tempStateValue != stateValue)
+			{
+				Act();
+			}
 		}
+
+		
+	}
+
+	// Act 함수는 이벤트함수 배열로 작성
+	private void Act()
+	{
+		// 조건에 따라 실행되는 컴포넌트의 조합이 달라진다. 
 	}
 
 	void Awake()
 	{
 		StateValue = "Idle";
 	}
+
+
 
 }
