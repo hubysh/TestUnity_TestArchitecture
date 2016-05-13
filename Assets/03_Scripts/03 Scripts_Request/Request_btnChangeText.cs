@@ -9,6 +9,10 @@ using UnityEngine.UI;
 /// </summary>
 public class Request_btnChangeText: MonoBehaviour
 {
+	void RequestChangeState()
+	{
+
+	}
 	void RequestChangeStateText1()
 	{
 		Singleton.Instance.txtResult_State.StateValue = "Test1";

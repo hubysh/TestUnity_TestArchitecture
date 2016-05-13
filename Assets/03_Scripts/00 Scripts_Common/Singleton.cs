@@ -16,10 +16,13 @@ public class Singleton : MonoBehaviour
 
 	// 게임오브젝트 핸들 변수
 	public GameObject txtResult;
+	public GameObject tglOptionA;
+	public GameObject tglOptionB;
+
 
 	// 게임오브젝트 내 컴포넌트 핸들 변수
 	public State_txtResult txtResult_State;
-	public Text txtResult_Text;
+
 
 	public static Singleton Instance
 	{
@@ -38,12 +41,13 @@ public class Singleton : MonoBehaviour
 	{
 		// 게임오브젝트 얻기
 		txtResult = GameObject.Find("txtResult");
+		tglOptionA = GameObject.Find("tglOptionA");
+		tglOptionB = GameObject.Find("tglOptionB");
 
 		// 상태 컴포넌트 얻기
 		txtResult_State = txtResult.GetComponent<State_txtResult>();
 
-		// Text 컴포넌트 얻기
-		txtResult_Text = txtResult.GetComponent<Text>();
+
 	}
 
 }
