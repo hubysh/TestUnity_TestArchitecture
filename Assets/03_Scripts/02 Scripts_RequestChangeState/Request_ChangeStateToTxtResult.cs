@@ -3,9 +3,9 @@ using System.Collections;
 using UnityEngine.UI;
 
 /// <summary>
-/// 상태 변화를 요청하는 컴포넌트
-/// 스크립트의 이름은 어떠한 상태로 변하기를 원하는지 나타내야 한다.
-/// 하기 클래스는 오브젝트의 내용이 "Text1"로 바뀌도록 상태변화를 요청할 것이므로, 이 내용을 담은 클래스 이름이 되어야한다.
+/// 오브젝트의 상태 변화를 요청하는 컴포넌트
+/// 어떤 환경에서 요청하는지에 따라 요청하는 내용이 달라진다. 
+/// 특정 이벤트가 발생하면, 이 이벤트를 환경을 고려하여 어떠한 요청으로 해석할지 하기 코드에서 판단한다. 
 /// </summary>
 public class Request_ChangeStateToTxtResult : MonoBehaviour
 {
